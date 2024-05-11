@@ -1,0 +1,455 @@
+body {
+    margin: 0;   
+    padding: 0; 
+    background-color: black;
+    overflow: hidden;   
+}
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 5%;
+    position: relative;
+    cursor: pointer;
+    z-index: 100;
+    margin-top: -25px;
+}
+header img{
+    position: relative;
+    width: 50px;
+    top: 15px;
+}
+header h1 {
+    font-size: 35px;
+    color: white;
+    letter-spacing: 5px;
+}
+span{
+    color: #ff4b0f;
+}
+header nav {
+    display: flex;  
+    gap: 30px;
+    margin-right: 150px;
+}
+header nav a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 550;
+    padding: 8px 16px;
+    border-radius: 99px;
+    transition: 0.3s;
+    color: white;
+    letter-spacing: 5px;
+}
+header nav a.active {
+    background: #ff4b0f;
+}
+header nav a:hover {
+    background: #ff4b0f;
+}
+header nav:hover > a:not(:hover) {
+    background: none;
+}
+.heading{
+    position: relative;
+    z-index: 525; 
+    margin-right: 600px;
+    letter-spacing: 3px;
+}
+.heading h2{
+    font-size: 26px;
+    color: #fff;
+    text-align: center;
+   
+}
+.heading p{
+    color:#fff ;   
+    /* max-width: 150px; */
+    font-size: 10px;
+    margin-left: 130px;
+    text-align: justify;
+    max-width: 650px;
+}
+section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 7px;
+    width: 70em;
+    height: 40em;
+    position: relative;
+    margin: 120px 350px;
+    padding: 40px;
+}
+img{
+    height: 150%;
+    width: 150%;
+}
+.sun {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 15em;
+    left: 15em;
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    box-shadow: 0 0 3em #ff4b0f;
+    animation: orbit 50s linear infinite;
+}
+.mercury,
+.venus,
+.earth,
+.moon,
+.mars,
+.jupiter,
+.saturn,
+.uranus,
+.neptune,
+.pluto {
+    position: absolute;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+    border-width: 0.1em 0.1em 0 0;
+    border-radius: 50%;
+}
+.mercury {
+    top: 12.5em;
+    left: 12.5em;
+    width: 15em;
+    height: 15em;
+    animation: orbit 68.7s linear infinite;
+}
+
+.venus {
+    top: 10em;
+    left: 10em;
+    width: 20em;
+    height: 20em;
+    animation: orbit 48.7s linear infinite;
+}
+
+.earth {
+    top: 6em;
+    left: 6em;
+    width: 28em;
+    height: 28em; 
+    animation: orbit 36.5s linear infinite;   
+}
+.moon {
+    top: 2em;
+    right: -1em;
+    width: 7em;
+    height: 7em; 
+    animation: orbit 2.7s linear infinite;
+}
+.mars {
+    top: 2em;
+    left: 2.5em;
+    width: 36em;
+    height: 36em; 
+    animation: orbit 26.5s linear infinite;
+}
+.jupiter {
+    top: -2em;
+    left: -2em;
+    width: 45em;
+    height: 45em; 
+    animation: orbit 21s linear infinite;
+}
+.saturn {
+    top: -7em;
+    left: -7em;
+    width: 55em;
+    height: 55em; 
+    animation: orbit 17s linear infinite;
+}
+.uranus {
+    top: -12em;
+    left: -12em;
+    width: 65em;
+    height: 65em; 
+    animation: orbit 19s linear infinite;
+}
+.neptune {
+    top: -17em;
+    left: -17em;
+    width: 75em;
+    height: 75em; 
+    animation: orbit 15s linear infinite;
+}
+.pluto {
+    top: -22em;
+    left: -22em;
+    width: 85em;
+    height: 85em; 
+    animation: orbit 18s linear infinite;
+}
+
+.mercury::before,
+.venus::before,
+.earth::before,
+.moon::before,
+.mars::before,
+.jupiter::before,
+.saturn::before,
+.uranus::before,
+.neptune::before,
+.pluto::before{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    animation: orbit 30s linear infinite;
+}
+.mercury::before {
+    top: 1.5em;
+    right: 0.8em;
+    width: 2em;
+    height: 2em;
+    background-image: url('mercury.png');
+    background-size: cover;
+}
+.venus::before {
+    top: 2em;
+    right: 2em;
+    width: 2em;
+    height: 2em;
+    background-image: url('venus.png');
+    background-size: cover;
+}
+.earth::before {
+    top: 3em;
+    right: 0em;
+    width: 5em;
+    height: 5em;
+    background-image: url('earth.png');
+    background-size: cover;
+}
+
+.moon::before {
+    top: 0.8em;
+    right: 0.2em;
+    width: 1.2em;
+    height: 1.2em;
+    background-image: url('moon.png');
+    background-size: cover;
+}
+.mars::before {
+    top: 5em;
+    right: 3em;
+    width: 3em;
+    height: 3em;
+    background-image: url('mars.png');
+    background-size: cover;
+}
+.jupiter::before {
+    top: 6em;
+    right: 3em;
+    width: 5em;
+    height: 5em;
+    background-image: url('jupiter.png');
+    background-size: cover;
+}
+.saturn::before {
+    top: 7.5em;
+    right: 5em;
+    width: 4.5em;
+    height: 4.5em;
+    background-image: url('saturn.png');
+    background-size: cover;
+}
+.uranus::before {
+    top: 9em;
+    right: 6.5em;
+    width: 4em;
+    height: 4em;
+    background-image: url('uranus.png');
+    background-size: cover;
+}
+.neptune::before {
+    top: 10em;
+    right: 8em;
+    width: 4em;
+    height: 4em;
+    background-image: url('neptune.png');
+    background-size: cover;
+}
+.pluto::before {
+    top: 11em;
+    right: 10em;
+    width: 4em;
+    height: 4em;
+    background-image: url('pluto.png');
+    background-size: cover;
+}
+
+.star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+@keyframes orbit {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+  .container2 {
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    top: 10%;
+    left:60%;
+    z-index: 9999999;
+}
+.container2 h1{
+    font-size: 22px;
+    color: white;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+.glassmorphism {
+    background: rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(1px); 
+    border-radius: 20px; 
+    box-shadow: 0 5px 20px 0 #ff4b0f; 
+    margin: 20px;
+    padding: 20px;
+   
+}
+
+.glassmorphism h1 {
+    text-align: center;
+    margin-bottom: 20px;    
+}
+
+.form-group {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+
+.form-group input {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 90%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+}
+
+.form-group input:focus {
+    outline: none;
+}
+#Address{
+    height: 70px;
+}
+.name{
+    display: flex;
+}
+button{
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: 0;
+    background: 0;
+    position: relative;
+    color: white;
+    font-weight: 600;
+    border: 1px solid #ff4b0f;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    letter-spacing: 3px;
+    margin-left: 130px;
+}
+button:hover{
+    background-color:#ff4b0f;
+    font-weight: 400;
+    color: white;
+}
+.rocket {
+    width: 120px;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    transform: rotate(-45deg);
+    animation: rockett 16s linear infinite alternate;
+}
+@keyframes rockett {
+    0%  {
+        transform: translateY(0) rotate(-45deg);
+    }
+    30% {
+        transform: translateY(-2200px) rotate(-45deg) translateX(-1950px);
+    }
+    60% {
+        transform: translateY(2222px) rotate(-90deg) translateX(-2000px);
+    }
+    60% {
+        transform: translateY(-595px) rotate(-90deg) translateX(0);
+    }
+}
+
+.craft{
+    width: 120px;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    animation: craft 8s linear infinite alternate; 
+    z-index: -5555;
+}
+@keyframes craft {
+    0% {
+        transform: translateY(0) ;
+    }
+    50% {
+        transform: translateY(-1600px) translateX(50px);
+    }
+    100% {
+        transform: translateY(200px) ;
+    }
+}
+.alien{
+    width: 100px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    animation: alien 10s linear infinite alternate; 
+    z-index: -55;
+    mix-blend-mode:lighten;
+}
+@keyframes alien {
+    0%  {
+        transform: translateY(50px);
+    }
+    30% {
+        transform: translateY(-900px)  translateX(-850px);
+    }
+    60% {
+        transform: translateY(-452px)  translateX(-650px);
+    }
+    60% {
+        transform: translateY(715px)  translateX(0);
+    }
+}
